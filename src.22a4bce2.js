@@ -6,7 +6,9 @@ const e=e=>new Promise(o=>{setTimeout(()=>{o(e)},e)}),o=e=>console.log(`Resolved
 const e=[{name:"Mango",active:!0},{name:"Poly",active:!1},{name:"Ajax",active:!0},{name:"Lux",active:!1}],a=(e,a)=>new Promise(n=>{n(e.map(e=>e.name===a?{...e,active:!e.active}:e))}),n=e=>console.table(e);a(e,"Mango").then(n),a(e,"Lux").then(n);
 },{}],"eBhC":[function(require,module,exports) {
 const t=(t,n)=>Math.floor(Math.random()*(n-t+1)+t),n=n=>{const a=t(200,500);return new Promise((t,o)=>{setTimeout(()=>{Math.random()>.3&&t({id:n.id,time:a}),o(n.id)},a)})},a=({id:t,time:n})=>{console.log(`Transaction ${t} processed in ${n}ms`)},o=t=>{console.warn(`Error processing transaction ${t}. Please try again later.`)};n({id:70,amount:150}).then(a).catch(o),n({id:71,amount:230}).then(a).catch(o),n({id:72,amount:75}).then(a).catch(o),n({id:73,amount:100}).then(a).catch(o);
+},{}],"M0QM":[function(require,module,exports) {
+const e=document.documentElement;document.querySelector("h1").addEventListener("mousemove",t=>{let o=t.offsetX,s=t.offsetY;e.style.setProperty("--mouse-x",`${o}px`),e.style.setProperty("--mouse-y",`${s}px`)});
 },{}],"Focm":[function(require,module,exports) {
-"use strict";require("./sass/main.scss"),require("./js/task-01"),require("./js/task-02"),require("./js/task-03");
-},{"./sass/main.scss":"clu1","./js/task-01":"o6lB","./js/task-02":"L79m","./js/task-03":"eBhC"}]},{},["Focm"], null)
-//# sourceMappingURL=/goit-js-hw-11-promisification/src.6d8cddd9.js.map
+"use strict";require("./sass/main.scss"),require("./js/task-01"),require("./js/task-02"),require("./js/task-03"),require("./js/title");
+},{"./sass/main.scss":"clu1","./js/task-01":"o6lB","./js/task-02":"L79m","./js/task-03":"eBhC","./js/title":"M0QM"}]},{},["Focm"], null)
+//# sourceMappingURL=/goit-js-hw-11-promisification/src.22a4bce2.js.map
